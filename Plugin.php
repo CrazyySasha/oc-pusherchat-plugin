@@ -64,7 +64,7 @@ class Plugin extends PluginBase
      */
     public function registerPermissions()
     {
-        return []; // Remove this line to activate
+       // return []; // Remove this line to activate
 
         return [
             'crazy.pusherchat.some_permission' => [
@@ -80,16 +80,30 @@ class Plugin extends PluginBase
      * @return array
      */
     public function registerNavigation()
-    {
-        return []; // Remove this line to activate
+    {    
 
         return [
             'pusherchat' => [
                 'label'       => 'PusherChat',
-                'url'         => Backend::url('crazy/pusherchat/mycontroller'),
-                'icon'        => 'icon-leaf',
+                'url'         => Backend::url('crazy/pusherchat/Chat'),
+                'icon'        => 'icon-comments-o',
                 'permissions' => ['crazy.pusherchat.*'],
                 'order'       => 500,
+                'sideMenu' => [
+
+                    'chat' => [
+                        'label' => 'Чаты',
+                        'icon' => 'icon-comments-o',
+                        'url' => Backend::url('crazy/pusherchat/Chat'),
+                        'permissions' => ['crazy.pusherchat.access_chat'],
+                    ],
+                    'message' => [
+                        'label' => 'Сообщения',
+                        'icon' => 'icon-comments-o',
+                        'url' => Backend::url('crazy/pusherchat/Message'),
+                        'permissions' => ['crazy.pusherchat.access_message'],
+                    ],
+                ],
             ],
         ];
     }

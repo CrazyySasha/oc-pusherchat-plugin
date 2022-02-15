@@ -30,6 +30,6 @@ class Message extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Crazy.Pusherchat', 'pusherchat', 'message');
+        BackendMenu::setContext('Crazy.PusherChat', 'pusherchat', 'message');
     }
 }
