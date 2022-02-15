@@ -13,7 +13,7 @@ class CreateChatsTable extends Migration
     {
         Schema::create('crazy_pusherchat_chats', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('message');
+            $table->integer('orders_id')->default(0);
             $table->timestamps();
         });
     }

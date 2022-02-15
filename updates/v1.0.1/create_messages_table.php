@@ -13,6 +13,9 @@ class CreateMessagesTable extends Migration
     {
         Schema::create('crazy_pusherchat_messages', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->default(0);
+            $table->integer('chat_id')->default(0);
+            $table->text('message')->nullable();
             $table->timestamps();
         });
     }
