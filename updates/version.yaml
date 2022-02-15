@@ -1,3 +1,6 @@
+1.0.2:
+  - v1.0.1/create_chats_table.php
+  - v1.0.1/create_messages_table.php
 1.0.1:
   - First version of chat plugin
   - v1.0.1/create_chats_table.php
