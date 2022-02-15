@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Message
+
+# Model Form Field configuration
+form: $/crazy/pusherchat/models/message/fields.yaml
+
+# Model Class name
+modelClass: Crazy\Pusherchat\Models\Message
+
+# Default redirect location
+defaultRedirect: crazy/pusherchat/message
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: crazy/pusherchat/message/update/:id
+    redirectClose: crazy/pusherchat/message
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: crazy/pusherchat/message
+    redirectClose: crazy/pusherchat/message
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
